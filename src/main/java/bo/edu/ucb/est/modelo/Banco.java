@@ -17,7 +17,7 @@ public class Banco {
     
     public Banco(String nombre) {
         this.nombre = nombre;
-        this.clientes = new ArrayList();
+        this.clientes = new ArrayList<Cliente>();
     }
     
     public String getNombre(){
@@ -39,7 +39,8 @@ public class Banco {
     public Cliente buscarClientePorCodigo(String codigoCliente, String pin) {
         for ( int i = 0; i < clientes.size(); i++) {
             Cliente cli = clientes.get(i); // Sacando elemento por elemento
-            if (cli.getCodigoCliente().equals(codigoCliente) && cli.getPinSeguridad().equals(pin)) {
+            if (cli.getCodigoCliente().equals(codigoCliente) && cli.getPinSeguridad().equals(pin)) 
+            {
                 return cli;
             }
         }

@@ -22,7 +22,7 @@ public class Cliente {
         this.nombre = nombre;
         this.codigoCliente = codigoCliente;
         this.pinSeguridad = pinSeguridad;
-        this.cuentas = new ArrayList();
+        this.cuentas = new ArrayList<Cuenta>();
     }
 
     public void agregarCuenta(Cuenta cuenta) {

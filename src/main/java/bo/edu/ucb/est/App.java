@@ -1,5 +1,6 @@
 package bo.edu.ucb.est;
 import bo.edu.ucb.est.modelo.Banco;
+import bo.edu.ucb.est.modelo.Cajero;
 import bo.edu.ucb.est.modelo.Cliente;
 import bo.edu.ucb.est.modelo.Cuenta;
 
@@ -13,7 +14,6 @@ public class App
     {
         System.out.println( "Inicializando Datos del Banco" );
         Banco bisa = new Banco("BANCO BISA");
-        
         Cliente jperez = new Cliente(" Juan Perez", "jperez", "3333");
         Cuenta cta1Jperez = new Cuenta("BOB", "Caja Ahorros", 12000.0);
         jperez.agregarCuenta(cta1Jperez);
@@ -34,6 +34,11 @@ public class App
         Cuenta cta3Cgomez = new Cuenta("BOB", "Caja Ahorros", 100000.0);
         cgomez.agregarCuenta(cta3Cgomez);
         bisa.agregarCliente(cgomez);
+        
+       new Cajero(bisa);
+     
+        
+        
         
     }
 }
